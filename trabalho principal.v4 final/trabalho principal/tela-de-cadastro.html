@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/custom.css" id="css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.css">
+    <title>cadastro-login</title>
+</head>
+<body class="bg">
+    <div class="cabeçario dark-cabeçario">
+        <h5><a href="tela-home.html" class="cl"> Telecall</a> <button class="mode" onclick="darkMode()"><img
+                    src="img/baseline_dark_mode_black_24dp.png" alt=""></button>
+            <button class="mode" onclick="lightmode()"><img src="img/baseline_light_mode_black_24dp.png"
+                    alt=""></button>
+            <div>
+            </div>
+        </h5>
+    </div>
+    <div class="container row">
+        <a class="links" id="paracadastro"></a>
+        <a class="links" id="paralogin"></a>
+        <div class="content">
+            <div class="row" id="login">
+                <form class="formulario col s12" method="post" action="">
+                    <img id="logo" src="img/telecall.png" alt="telecall" class="responsive-img  ">
+                    <h1 class="cl">área do cliente:
+                    </h1>
+                    <p>
+                        <label class="cl" for="nome_login">login:</label>
+                        <input onkeypress="return ApenasLetras(event,this);" required maxlength="6" class="cl "
+                            id="nome_login" name="nome_login" required="required" type="text" />
+                    </p>
+
+                    <p>
+                        <label class="cl" for="senha">senha:</label>
+                        <input class="cl " onkeypress="return ApenasLetras(event,this);" required maxlength="8"
+                            id="senha" name="email_login" required="required" type="password" />
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Logar" />
+                    </p>
+
+                    <p class="link">
+                        Ainda não tem conta?
+                        <a href="#paracadastro" class="link">Cadastre-se</a>
+                    </p>
+                </form>
+            </div>
+            <div id="cadastro">
+                <form method="post" name="f1" action="" class="formulario row " autocomplete="on">
+
+                    <h1 class="cl"> <img id="logo2" src="img/telecall.png" alt="telecall" class="responsive-img  "> <br>
+                        Bem vindo(a) </h1>
+                    <hr>
+                    <label id="labellogin1" for="text" class="cl "> Login: </label>
+                    <input maxlength="6" placeholder="Seu login" class="cl "
+                        onkeypress="return ApenasLetras(event,this);" type="text" id="login1" name="login1" required>
+                    <br>
+                    <label id="labelSenha1" class="cl form-label" for="pwd">Senha:</label>
+                    <input class="cl " placeholder="senha" onkeypress="return ApenasLetras(event,this);" required
+                        maxlength="8" type="password" name="senha1" id="senha1"><br>
+                    <label id="labelSenha2" for="confirmar senha" class="cl  ">Confirmar senha: </label>
+                    <input type="password" placeholder="Repetir sua senha" onkeypress="return ApenasLetras(event,this);"
+                        required maxlength="8" required class="cl " name="senha2" id="senha2">
+                    <br>
+                    <label id="labelNome" class="cl" for="fname">Seu nome:</label>
+                    <input minlength="15" maxlength="60" class="cl" required type="text" name="nome" id="nome"
+                        placeholder=" Seu nome completo">
+                    <br>
+                    <label id="labelNomeMae" for="nome-mae" class="cl">nome da mãe:</label>
+                    <input minlength="15" maxlength="60" type="text"
+                        class="cl" name="mae" id="mae" placeholder="Nome completo da mãe">
+                    <br>
+                    <label id="labelNascimento" class="cl" for="Data de Nascimento,">Data de Nascimento:</label>
+                    <input class="cl" required type="date" onblur="validadata(this.value);" required maxlength="8"
+                        name="nascimento" id="nascimento">
+
+                    <br>
+                    <label class="cl" id="labelSexo" for="sexo">sexo:</label>
+                    <input class="cl" required placeholder="seu sexo:" list="browsers" id="sexo" name="sexo" /></label>
+                    <datalist id="browsers">
+                        <option value="feminino">
+                        <option value="masculino">
+                        <option value="outros">
+                    </datalist><br>
+                    <label id="labelEmail" class="cl" for="email">Qual e seu email?</label>
+                    <input class="cl" onblur="validacaoEmail(f1.email)" required type="email" id="email" name="email"
+                        placeholder="Qual é seu email?">
+                    <div id="msgemail"></div>
+                    <br>
+                    <label id="labelTelefone" class="cl" for="tel">Telefone:</label>
+                    <input class="cl" onkeypress='return onlynumber();' onabort="val();" required type="tel"
+                        maxlength="15" id="telefone" name="telefone" class="input-padrao"
+                        placeholder="+55(00) 00000-0000">
+                    <br>
+                    <label id="labelCpf" class="cl " for="doc">Qual e seu cpf?</label>
+                    <input class="cl" type="text" maxlength="14" id="cpf" onblur="validarCPF(this)"
+                        placeholder="Apenas Números" required (); name="cpf" placeholder="Ex.: 000.000.000-00" />
+                    <br>
+                    <label id="labelCep" class="cl">Qual e o seu Cep:</label>
+                    <input name="cep" class="cl" onkeypress='return onlynumber();' required type="text" id="cep"
+                        value="" placeholder="Ex.: 00000-000" size="10" maxlength="9"
+                        onblur="pesquisacep(this.value);" /><br />
+                    <label class="cl">Rua:
+                        <input name="rua" placeholder="Qual e sua rua?" class="cl" type="text" id="rua"
+                            size="60" /></label><br />
+                    <label class="cl">Bairro:
+                        <input class="cl" placeholder="Qual e seu bairro?" name="bairro" type="text" id="bairro"
+                            size="40" /></label><br />
+                    <label class="cl">Cidade:
+                        <input class="cl" name="cidade" placeholder="qual e sua cidade?" type="text" id="cidade"
+                            size="40" /></label><br />
+                    <label class="cl">Estado:
+                        <input class="cl" name="uf" placeholder="Qual e seu estado?" type="text" id="uf"
+                            size="2" /></label><br />
+                    <label class="cl">numero da casa:
+                        <input class="cl" placeholder="qual e o numero da sua casa?" onkeypress='return onlynumber();'
+                            name="numero-casa" type="text" id="numero-casa" size="8" required />
+                    </label><br />
+                    <label for="complemento" class="cl"> complemento:
+                        <input type="textarea" name="complemento" id="complemento">
+                    </label><br>
+                    </p>
+                    <input type="submit" href="#paralogin" value="cadastra"> <br>
+                    <p class="link">
+                        você ja é cliente?
+
+                        <a href="#paralogin" id="topo" class="tamanho link "> área do cliente </a>
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="java/jquery-3.6.min.js"></script>
+    <script type="text/javascript" src="java/scripts.js"></script>
+    <script type="text/javascript" src="java/materialize.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+</body>
+</html>

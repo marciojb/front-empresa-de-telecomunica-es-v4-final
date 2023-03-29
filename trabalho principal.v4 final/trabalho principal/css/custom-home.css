@@ -1,0 +1,30 @@
+.bl{
+  color: whitesmoke;
+}
+.bg{
+  background-color: #93051b;
+ margin-top: -13px;
+}
+.bc{
+  margin-top: -18px;
+  background-color: #01487a;
+ text-align: left;
+}
+.cabeçario{
+margin-top: -10px;
+
+}
+.titulo-1{
+  text-align: center;
+  margin-top: 10px;
+  color: #01487a ;
+}
+.boxe{
+  margin-top: 10px;
+}
+strong{
+  color: #00BFFF;
+}
+html{
+  text-align: center;
+}
